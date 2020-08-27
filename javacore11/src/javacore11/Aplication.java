@@ -13,7 +13,7 @@ public class Aplication {
 	static void menu() {
 
 		System.out.println("Натисніть 1 щоб вивести всі дані з масиву ");
-		System.out.println("Натисніть 2 щоб змінити поле кількість кінських сил у Авто");
+		System.out.println("Натисніть 2 щоб змінити всі поля у Авто");
 	}
 
 	public static void main(String[] args) {
@@ -68,32 +68,27 @@ public class Aplication {
 				break;
 			}
 			case "2": {
-				System.out.println("Enter power");
+				System.out.println("Введіть потужність");
 				sc = new Scanner(System.in);
 				int power = sc.nextInt();
 				
-				System.out.println("Enter year");
+				System.out.println("Введіть рік");
 				int years = sc.nextInt();
 				
-				System.out.println("Enter wheel size");		
+				System.out.println("Введіть розмір коліс");		
 				int wsize = sc.nextInt();
 		
 				SteeringWheel se = new SteeringWheel(wsize, "Alkantara");
 				
-				System.out.println("Enter amount of cylinders");
+				System.out.println("Введіть кількість циліндрів");
 				int xcylinders = sc.nextInt();
 				
 				Engine en = new Engine(xcylinders);
 				
 				Auto m = new Auto(power, years, se, en);
 				
-				int i1, j1;
-				
-				for (i1 = 0; i1 < count; i1++)
-					for (j1 = 0; j1 < count; j1++) {
-						avtomobil[i1][j1] = m;
-					}
-				
+				for (Object[] row : avtomobil) 
+				     Arrays.fill(row, new Auto(power, years, se, en));
 				break;
 			}
 			}

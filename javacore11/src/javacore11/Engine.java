@@ -2,7 +2,7 @@ package javacore11;
 
 public class Engine{
 	
-	int amountOfCylinders;
+	private int amountOfCylinders;
 
 	public Engine(int amountOfCylinders) {
 		super();

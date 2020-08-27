@@ -2,8 +2,8 @@ package javacore11;
 
 public class SteeringWheel{
 	
-	int wheelsSize;
-	String SteeringWheelMaterial = "alcantara";
+	private int wheelsSize;
+	private String SteeringWheelMaterial = "alcantara";
 	
 	public SteeringWheel(int wheelsSize, String steeringWheelMaterial) {
 		super();

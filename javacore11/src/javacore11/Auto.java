@@ -2,8 +2,8 @@ package javacore11;
 
 public class Auto {
 
-	int horsePower;
-	int manufactureYear;
+	private int horsePower;
+	private int manufactureYear;
 	SteeringWheel steeringwheel;
 	Engine engine;
 	
