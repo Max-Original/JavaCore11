@@ -76,8 +76,10 @@ public class Aplication {
 				
 				Engine en = new Engine(field);
 				
+				Auto m = new Auto(field, field, se, en);
+				
 				for (Object[] row : avtomobil) 
-				     Arrays.fill(row, new Auto(field, field, se, en));
+				     Arrays.fill(row, m);
 				break;
 			}
 			}
