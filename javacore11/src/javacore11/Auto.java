@@ -4,8 +4,8 @@ public class Auto {
 
 	private int horsePower;
 	private int manufactureYear;
-	SteeringWheel steeringwheel;
-	Engine engine;
+	private SteeringWheel steeringwheel;
+	private Engine engine;
 	
 	public Auto(int horsePower, int manufactureYear, SteeringWheel steeringwheel, Engine engine) {
 		super();
