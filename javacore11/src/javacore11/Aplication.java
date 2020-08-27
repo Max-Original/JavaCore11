@@ -70,25 +70,14 @@ public class Aplication {
 			case "2": {
 				System.out.println("¬вед≥ть потужн≥сть");
 				sc = new Scanner(System.in);
-				int power = sc.nextInt();
+				int field = sc.nextInt();
 				
-				System.out.println("¬вед≥ть р≥к");
-				int years = sc.nextInt();
+				SteeringWheel se = new SteeringWheel(field, "Alkantara");
 				
-				System.out.println("¬вед≥ть розм≥р кол≥с");		
-				int wsize = sc.nextInt();
-		
-				SteeringWheel se = new SteeringWheel(wsize, "Alkantara");
-				
-				System.out.println("¬вед≥ть к≥льк≥сть цил≥ндр≥в");
-				int xcylinders = sc.nextInt();
-				
-				Engine en = new Engine(xcylinders);
-				
-				Auto m = new Auto(power, years, se, en);
+				Engine en = new Engine(field);
 				
 				for (Object[] row : avtomobil) 
-				     Arrays.fill(row, new Auto(power, years, se, en));
+				     Arrays.fill(row, new Auto(field, field, se, en));
 				break;
 			}
 			}
